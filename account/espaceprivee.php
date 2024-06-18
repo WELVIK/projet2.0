@@ -93,6 +93,7 @@ while ($row = $result->fetch_assoc()) {
           LOGOUT
         </a>
       </nav>
+
     </aside>
     <div class="flex-grow bg-gray-100">
       <header class="flex items-center justify-between px-6 py-5 max-w-6xl mx-auto mb-4">
@@ -155,20 +156,22 @@ while ($row = $result->fetch_assoc()) {
               </svg>
             </a>
           </div>
-          <div class="h-64 bg-white border rounded-lg shadow-md py-4 px-6">
+          <div class="h-68 bg-white border rounded-lg shadow-md py-4 px-6">
                         
-                        <!-- Ajout des stagiaires -->
                         <div class="mt-4">
-                            <header class="text-lg font-semibold">Users List</header>
+                            <header class="text-lg font-semibold">Users List<a href="inserer.php?id=<?php echo $utilisateur['id']; ?>" class="ml-2 bg-blue-500 text-white py-1 px-2 rounded">Ajouter</a></header>
                             <br>
                             
                             <ul class="list-disc pl-5">
                                 <?php foreach ($utilisateurs as $utilisateurs): ?>
-                                    <li><?php echo htmlspecialchars($utilisateurs['nom'] . '-' . $utilisateurs['prenom'] . ' - ' . $utilisateurs['email'] . '   /    '. $utilisateurs['date_inscription']); ?></li>
+                                    <li><?php echo htmlspecialchars($utilisateurs['nom'] . '-' . $utilisateurs['prenom'] . ' - ' . $utilisateurs['email'] . '   /    '. $utilisateurs['date_inscription']);  ?>
+                                    <a href="supprimer.php?id=<?php echo $utilisateur['id']; ?>" class="ml-2 bg-red-500 text-white py-1 px-2 rounded">Supprimer</a>
+                                    <a href="modifier.php?id=<?php echo $utilisateur['id']; ?>" class="ml-2 bg-blue-500 text-white py-1 px-2 rounded">Modifier</a>
+                                </li> <br>
                                 <?php endforeach; ?>
                             </ul>
                         </div>
-                    </div>
+            </div>
         </section>
       </main>
     </div>
