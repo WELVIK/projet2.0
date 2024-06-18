@@ -7,6 +7,13 @@
     <title>WELVIK</title>
   </head>
   <body>
+    <div class="loading">
+      <div class="three-body">
+        <div class="three-body__dot"></div>
+        <div class="three-body__dot"></div>
+        <div class="three-body__dot"></div>
+      </div>
+    </div>
     <nav>
       <div class="nav__logo">
         <a href="#"><img src="IMAGE\LOGO1.png" alt="logo" /></a>
@@ -19,6 +26,7 @@
         <li class="link"><a href="BMI/index.html">BMI</a></li>
       </ul>
       <button class="btn" ><a href="join/index.html">Join Now</a></button>
+      <button class="btn" ><a href="../account/login.php">login</a></button>
     </nav>
 
     <header class="section__container header__container">
@@ -206,5 +214,20 @@
     <div class="footer__bar">
       Copyright © 2023 Web Design Mastery. All rights reserved.
     </div>
+    <script>
+     document.addEventListener("DOMContentLoaded", function() {
+    const loadingElement = document.querySelector('.loading');
+    const mainContent = document.querySelector('.main-content');
+
+    // Show the main content and hide the loading animation after 5 seconds
+    setTimeout(function() {
+        loadingElement.style.display = 'none';
+        mainContent.style.display = 'block';
+    }, 1000); // 5000 milliseconds = 5 seconds
+});
+
+
+    </script>
   </body>
 </html>
+

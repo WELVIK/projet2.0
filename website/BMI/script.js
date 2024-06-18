@@ -42,3 +42,4 @@ function interpretBMI(bmi) {
     return "obese";
   }
 }
+//loading
